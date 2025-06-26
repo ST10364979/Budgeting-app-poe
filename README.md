@@ -1,2 +1,4 @@
-# Budgeting-app-poe
-This is our budgeting app
+
+ST10147766 - Tumelo Cynthia Lamola 
+ST10048689 - Nonhlanhla Masinga
+ST10388513 - Vickness Pheeha
