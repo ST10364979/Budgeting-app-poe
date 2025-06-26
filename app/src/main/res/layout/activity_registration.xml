@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".RegistrationActivity">
+
+    <!-- 🌌 Lottie Animated Background -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wa"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 🔙 Back Button -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/circle_ripple"
+        android:contentDescription="Back"
+        android:padding="12dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#FFFFFF" />
+
+    <!-- 🧊 Logo -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logoContainer"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="70dp"
+        app:cardBackgroundColor="#80FFFFFF"
+        app:cardCornerRadius="60dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- ✍️ Headings -->
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Join Us Today"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoContainer" />
+
+    <TextView
+        android:id="@+id/tvCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a new account to get started"
+        android:textColor="#E0E0E0"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegister" />
+
+    <!-- 🧾 Form Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        app:cardBackgroundColor="#B3FFFFFF"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreateAccount">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="440dp"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- 🧑 Full Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:textColorHint="#9E9E9E"
+                app:boxStrokeColor="#9932CC"
+                app:boxStrokeWidth="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="#9932CC"
+                app:hintTextColor="#9932CC"
+                app:startIconDrawable="@drawable/ic_email"
+                app:startIconTint="#9932CC">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter full name"
+                    android:inputType="textPersonName"
+                    android:textColor="#333333" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 📧 Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Email"
+                android:textColorHint="#9E9E9E"
+                app:boxStrokeColor="#9932CC"
+                app:boxStrokeWidth="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="#9932CC"
+                app:hintTextColor="#9932CC"
+                app:startIconDrawable="@drawable/ic_email"
+                app:startIconTint="#9932CC">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#333333" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 🔒 Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Password"
+                android:textColorHint="#9E9E9E"
+                app:boxStrokeColor="#9932CC"
+                app:boxStrokeWidth="2dp"
+                app:endIconMode="password_toggle"
+                app:endIconTint="#9932CC"
+                app:hintTextColor="#9932CC"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="#9932CC">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your password"
+                    android:inputType="textPassword"
+                    android:textColor="#333333" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 🔒 Confirm Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilConfirmPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Confirm Password"
+                android:textColorHint="#9E9E9E"
+                app:boxStrokeColor="#9932CC"
+                app:boxStrokeWidth="2dp"
+                app:endIconMode="password_toggle"
+                app:endIconTint="#9932CC"
+                app:hintTextColor="#9932CC"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="#9932CC">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Re-enter your password"
+                    android:inputType="textPassword"
+                    android:textColor="#333333" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ✅ Register Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#9932CC"
+                android:text="CREATE ACCOUNT"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:elevation="6dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 🔁 Bottom Links -->
+    <TextView
+        android:id="@+id/tvAlreadyHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Already have an account? Login"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardForm"
+        app:layout_constraintStart_toStartOf="@+id/cardForm"
+        app:layout_constraintTop_toBottomOf="@+id/cardForm" />
+
+    <TextView
+        android:id="@+id/tvTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="By registering, you agree to our Terms and Conditions"
+        android:textColor="#E0E0E0"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
