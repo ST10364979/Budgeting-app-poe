@@ -16,6 +16,8 @@ The two additional features we've implemented in SmartApp are:
 Gamification System: We've added game-like elements including achievement badges, progress levels, reward points, and financial challenges to make personal finance management more engaging and motivating for users.
 Advanced Animation System: Using Lottie animations and dynamic icons, we've created a more visually appealing interface with smooth transitions, celebratory animations for achievements, and interactive data visualizations that bring financial data to life.
 
+YouTube: https://youtu.be/rkENZvrQmQs?si=A80L0aMHWPodqQ5g
+
 ST10147766 - Tumelo Cynthia Lamola 
 Github link: https://github.com/ST10364979/Budgeting-app-poe
 
